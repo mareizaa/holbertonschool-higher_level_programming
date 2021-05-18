@@ -19,12 +19,12 @@ class Square:
 
     @property
     def size(self):
-        """returns the current square area"""
+        """to retrieve it"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """returns the current square area"""
+        """to set it"""
         if isinstance(value, int):
             self.__size = value
             if value < 0:
