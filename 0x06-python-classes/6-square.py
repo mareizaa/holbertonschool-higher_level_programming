@@ -38,6 +38,7 @@ class Square:
             raise TypeError("size must be an integer")
 
     def my_print(self):
+        """print square"""
         if self.__size != 0:
             for pos in range(self.__position[1]):
                 print("")
@@ -61,6 +62,6 @@ class Square:
         """to set it"""
         self.__position = value
         for i in self.__position:
-            if isinstance(i, int) or (len(self.__position) != 2) or i < 0:
+            if type(i) is not int or (len(self.__position) != 2) or i < 0:
                 raise TypeError("position must be a tuple of \
                     2 positive integers")
