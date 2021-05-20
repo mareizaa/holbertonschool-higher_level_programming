@@ -5,6 +5,7 @@
 class Rectangle:
     """defines a rectangle"""
     def __init__(self, width=0, height=0):
+        """Initializes the instance"""
         if isinstance(height, int):
             self.__height = height
             if height < 0:
@@ -21,10 +22,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """to retrieve it"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """to set it"""
         if isinstance(self.__width, int):
             self.__width = value
             if value < 0:
@@ -34,10 +37,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """to retrieve it"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """to set it"""
         if isinstance(self.__height, int):
             self.__height = value
             if value < 0:
