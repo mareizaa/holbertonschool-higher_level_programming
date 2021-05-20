@@ -2,6 +2,9 @@
 """This is a module"""
 
 
+from typing import ValuesView
+
+
 class Rectangle:
     """defines a rectangle"""
     def __init__(self, width=0, height=0):
@@ -28,7 +31,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """to set it"""
-        if isinstance(self.__width, int):
+        if isinstance(value, int):
             self.__width = value
             if value < 0:
                 raise ValueError("width must be >= 0")
@@ -43,7 +46,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """to set it"""
-        if isinstance(self.__height, int):
+        if isinstance(value, int):
             self.__height = value
             if value < 0:
                 raise ValueError("height must be >= 0")
