@@ -92,7 +92,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if a > b:
                 return rect_1
-        elif b > a: 
+        elif b > a:
             return rect_2
 
     def __del__(self):
