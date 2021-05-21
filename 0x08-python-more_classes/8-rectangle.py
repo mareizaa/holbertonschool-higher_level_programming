@@ -92,8 +92,10 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if a > b:
                 return rect_1
-        else:
+        elif b > a:
             return rect_2
+        else:
+            return rect_1
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
