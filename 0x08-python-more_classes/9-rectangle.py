@@ -99,7 +99,9 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return cls(cls.width == cls.height == size)
+        a = size
+        b = size
+        return cls(a, b)
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
