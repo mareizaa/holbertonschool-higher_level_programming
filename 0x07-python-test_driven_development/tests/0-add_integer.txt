@@ -1,0 +1,48 @@
+"""
+function that adds two integers 
+Test that the arguments are integers
+returns the result
+"""
+First import
+``add_integer``
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# add two integers
+>>> add_integer(8, 1)
+9
+
+# add two integers
+>>> add_integer(0, -1)
+-1
+
+# Function without arguments
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+# Floating in the position of a
+>>> add_integer(0.033333223333, -1)
+-1
+
+# Floating in the position of b
+>>> add_integer(0.033333223333, -1)
+-1
+
+# Strings
+>>> add_integer("err", 9)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# Tuple
+>>> add_integer((), 9)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# Char
+>>> add_integer(5, '9')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
