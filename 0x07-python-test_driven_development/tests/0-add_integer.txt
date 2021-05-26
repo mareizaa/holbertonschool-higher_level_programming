@@ -58,3 +58,7 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+
+# An argument
+>>> add_integer(3)
+101
