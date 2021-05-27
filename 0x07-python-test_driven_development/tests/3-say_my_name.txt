@@ -1,0 +1,30 @@
+"""
+prints My name is first name last name
+return exception 
+if they do not miss a string
+"""
+First import
+``say_my_name``
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# print name
+>>> say_my_name("Marcela", "Areiza")
+My name is Marcela Areiza
+
+# First Name integer
+>>> say_my_name(0, "Areiza")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# last name integer
+>>> say_my_name("Marcela", 2)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+# Empty
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
