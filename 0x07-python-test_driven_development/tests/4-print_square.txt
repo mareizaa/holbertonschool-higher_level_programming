@@ -1,0 +1,39 @@
+"""
+function that adds two integers 
+Test that the arguments are integers
+returns the result
+"""
+First import
+``print square``
+>>> print_square = __import__('4-print_square').print_square
+
+# print_square
+>>> print_square(4)
+####
+####
+####
+####
+
+# add float
+>>> print_square(2.144)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Strings
+>>> print_square("err")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Empty
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+# Negative
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
