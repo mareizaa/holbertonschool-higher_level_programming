@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(()), None)
 
     def empty(self):
-        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([]))
 
     def string(self):
         self.assertRaises(TypeError, max_integer["hello", "world", 6, "h"])
