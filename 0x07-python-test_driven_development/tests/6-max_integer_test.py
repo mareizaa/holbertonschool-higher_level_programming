@@ -24,6 +24,8 @@ class TestMaxInteger(unittest.TestCase):
     def string(self):
         self.assertRaises(TypeError, max_integer["hello", "world", 6, "h"])
         self.assertRaises(TypeError, max_integer[6, "h"])
+        self.assertEqual(max_integer(("Marce", "Areiza")), "Marce")
+        self.assertEqual(max_integer(["Marce", "Areiza", "Hello"]), "Marce")
 
     def num_float(self):
         self.assertEqual(max_integer(float('-inf')), 8)
