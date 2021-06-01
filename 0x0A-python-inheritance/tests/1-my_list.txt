@@ -1,0 +1,27 @@
+"""
+class MyList that inherits from list
+prints the list
+sorted (ascending sort)
+"""
+First import
+``print_sorted``
+>>> MyList = __import__('1-my_list').MyList
+
+# Prints an ordered list of integers
+>>> my_list = MyList([1, 2, 8, 5])
+>>> print(my_list)
+[1, 2, 8, 5]
+>>> my_list.print_sorted()
+[1, 2, 5, 8]
+
+# Empty
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+
+# Prints an ordered list of floats
+>>> my_list = MyList([1, 2, 8.56, 5])
+>>> my_list.print_sorted()
+[1, 2, 5, 8.56]
