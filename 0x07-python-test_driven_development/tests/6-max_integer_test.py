@@ -12,6 +12,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_integer(self):
         self.assertEqual(max_integer([3, 8, 2, 6]), 8)
         self.assertEqual(max_integer([3, -8, 2, 6]), 6)
+        self.assertEqual(max_integer([15, -8, 2, 6]), 15)
         self.assertEqual(max_integer([6]), 6)
 
     def string(self):
@@ -19,8 +20,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer[6, "h"])
 
     def empty(self):
-        self.assertEqual(max_integer())
-        self.assertEqual(max_integer([]))
+        self.assertEqual(max_integer(), None)
+        self.assertEqual(max_integer([]), None)
 
     def num_float(self):
         self.assertEqual(max_integer(float('-inf')), 8)
