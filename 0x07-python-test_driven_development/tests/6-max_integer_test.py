@@ -15,13 +15,13 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([15, -8, 2, 6]), 15)
         self.assertEqual(max_integer([6]), 6)
 
-    def string(self):
-        self.assertRaises(TypeError, max_integer["hello", "world", 6, "h"])
-        self.assertRaises(TypeError, max_integer[6, "h"])
-
     def list_is_empty(self):
         self.assertEqual(max_integer(()), None)
         self.assertEqual(max_integer([]), None)
+
+    def string(self):
+        self.assertRaises(TypeError, max_integer["hello", "world", 6, "h"])
+        self.assertRaises(TypeError, max_integer[6, "h"])
 
     def num_float(self):
         self.assertEqual(max_integer(float('-inf')), 8)
