@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer[6, "h"])
 
     def list_is_empty(self):
-        self.assertEqual(max_integer([ ]), None)
+        self.assertEqual(max_integer(()), None)
         self.assertEqual(max_integer([]), None)
 
     def num_float(self):
