@@ -25,3 +25,10 @@ First import
 >>> my_list = MyList([1, 2, 8.56, 5])
 >>> my_list.print_sorted()
 [1, 2, 5, 8.56]
+
+# Prints an ordered list whit negatives
+>>> my_list = MyList([1, 2, -6, 5])
+>>> print(my_list)
+[1, 2, -6, 5]
+>>> my_list.print_sorted()
+[-6, 1, 2, 5]
