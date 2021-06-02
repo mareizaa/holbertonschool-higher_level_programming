@@ -7,6 +7,9 @@ First import
 
 >>> bg = BaseGeometry()
 
+>>> print(bg) # doctest: +ELLIPSIS
+<7-base_geometry.BaseGeometry object at ...>
+
 # integer
 >>> bg.integer_validator("my_int", 12)
 
@@ -90,4 +93,3 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
-
