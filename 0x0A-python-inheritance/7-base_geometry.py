@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This is my class"""
+"""
+This is my class
+"""
 
 
 class BaseGeometry():
