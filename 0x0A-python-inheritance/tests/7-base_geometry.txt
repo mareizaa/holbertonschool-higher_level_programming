@@ -67,3 +67,14 @@ NameError: name 'name' is not defined
 Traceback (most recent call last):
 ...
 ValueError: {'hello': 6} must be greater than 0
+
+# list
+>>> bg.integer_validator("name", [5])
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+# Dict
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
