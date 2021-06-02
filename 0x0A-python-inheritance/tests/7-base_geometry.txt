@@ -75,6 +75,7 @@ Traceback (most recent call last):
 TypeError: name must be an integer
 
 # Dict
+bg.integer_validator("name", {5})
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
