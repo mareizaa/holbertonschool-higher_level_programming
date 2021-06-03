@@ -6,8 +6,10 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 
 arg = sys.argv[1:]
-filename = "add_item.json"
-obj = load_from_json_file(filename)
+try:
+    obj = load_from_json_file("add_item.json")
+except:
+    obj = []
 for i in arg:
     obj.append(i)
-save_to_json_file(obj, filename)
+save_to_json_file(obj, "add_item.json")
