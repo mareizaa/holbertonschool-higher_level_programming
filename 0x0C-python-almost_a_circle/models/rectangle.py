@@ -22,10 +22,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """getter"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """setter"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -34,10 +36,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """getter"""
         return self.__height
 
     @height.setter
     def height(self, height):
+        """setter"""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -46,10 +50,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """getter"""
         return self.__y
 
     @y.setter
     def y(self, y):
+        """setter"""
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -58,10 +64,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """getter"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """setter"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -69,9 +77,11 @@ class Rectangle(Base):
         self.__x = x
 
     def area(self):
+        """return area of rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """print rectangle"""
         for lines in range(self.__y):
             print("")
         for i in range(self.__height):
@@ -82,6 +92,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
+        """update rectangle"""
         if args:
             if len(args) == 1:
                 self.id = args[0]
@@ -107,5 +118,6 @@ class Rectangle(Base):
                 self.__y = value
 
     def __str__(self):
+        """return string"""
         return str("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
