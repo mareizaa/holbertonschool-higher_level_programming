@@ -94,8 +94,6 @@ class Rectangle(Base):
             elif len(args) == 5:
                 self.__y = args[4]
 
-        attribute = ["id", "width", "height", "x", "y"]
-
         for key, value in kwargs.items():
             if key == "id":
                 self.id = value
