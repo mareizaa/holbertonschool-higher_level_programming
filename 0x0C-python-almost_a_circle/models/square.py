@@ -31,21 +31,10 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """ handle args and kwargs """
         if args:
-            if len(args) == 1:
-                self.id = args[0]
-            if len(args) == 2:
-                self.size = args[1]
-            if len(args) == 3:
-                self.x = args[2]
-            if len(args) == 4:
-                self.y = args[3]
+            a_square = ["id", "size", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, a_square[i], args[i])
 
-        for key, value in kwargs.items():
-            if key == "id":
-                self.id = value
-            elif key == "size":
-                self.size = value
-            elif key == "x":
-                self.x = value
-            elif key == "y":
-                self.y = value
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
