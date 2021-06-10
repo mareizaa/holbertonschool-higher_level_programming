@@ -34,3 +34,9 @@ class Base:
                 new_list.append(i.to_dictionary())
         with open("{}.json".format(cls.__name__), 'w') as f:
             f.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
