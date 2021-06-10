@@ -30,8 +30,9 @@ class Base:
         """writes the JSON string representation of list_objs to a file"""
         if list_objs is None:
             empty = []
-        new_list = []
-        for i in list_objs:
-            new_list.append(i.to_dictionary())
-        with open("{}.json".format(cls.__name__), 'w', encoding='utf-8') as f:
-            f.write(cls.to_json_string(new_list))
+        else:
+            new_list = []
+            for i in list_objs:
+                new_list.append(i.to_dictionary())
+            with open("{}.json".format(cls.__name__), 'w') as f:
+                f.write(cls.to_json_string(new_list))
