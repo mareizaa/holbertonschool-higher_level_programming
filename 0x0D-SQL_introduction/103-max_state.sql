@@ -1,0 +1,2 @@
+-- Temperatures #2
+-- Displays the max temperature of each state (ordered by State name)
