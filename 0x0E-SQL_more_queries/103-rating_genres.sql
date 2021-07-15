@@ -1,0 +1,2 @@
+-- Best genre
+-- Lists all genres in the database hbtn_0d_tvshows_rate by their rating
