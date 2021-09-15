@@ -13,7 +13,8 @@ request(url, (error, data, body) => {
   const films = obj.results;
   let num = 0;
   for (let i = 0; i < films.length; i++) {
-    if (films[i].characters.includes(char)) {
+    const character = films[i].characters;
+    if (character.includes(char)) {
       num += 1;
     }
   }
